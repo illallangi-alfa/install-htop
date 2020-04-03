@@ -1,0 +1,7 @@
+---
+- name: "Install htop"
+  package:
+    pkg: "{{ install_htop_packages[(ansible_os_family | lower) + '_' + (ansible_architecture | lower)] }}"
+    state: "present"
+  tags:
+    - "htop"
